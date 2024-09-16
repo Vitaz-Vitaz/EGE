@@ -1,0 +1,24 @@
+al = 'АГЕМНРТУ'
+c = 0
+qq = []
+
+al = sorted(al)
+
+
+def equeeld(s):
+    for i in range(len(s) - 1):
+        if s[i] > s[i + 1]:
+            return False
+    return True
+
+
+for i1 in al:
+    for i2 in al:
+        for i3 in al:
+            for i4 in al:
+                ans = i1 + i2 + i3 + i4
+                print(ans)
+                c += 1
+                if len(set(ans)) == len(ans) and equeeld(ans):
+                    qq.append(c)
+print(qq)
