@@ -1,0 +1,13 @@
+f = open("9.txt")
+for e in f:
+    sp = list(map(int, e.split()))
+    aa = []
+    for j in range(len(sp)):
+       aa.append(sp.count(sp[j]))
+    flag1 = aa.count(2) == 4 and aa.count(1) == 2
+    flag2 = sp.count(max(sp)) == 1
+    bb = sorted(sp)
+    flag3 = (bb[0] * bb[-1]) > (bb[1] + bb[2] + bb[3] + bb[4])
+    if flag1 and flag2 and flag3:
+        print(sum(sp))
+        exit(0)
