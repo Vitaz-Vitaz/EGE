@@ -1,0 +1,10 @@
+for A in range(-1000, 1000):
+    for x in range(0, 1000):
+        for y in range(0, 1000):
+            if not (((x > 68) or (y > 89)) or (2 * x - 7 * y) < A):
+                break
+        if not (((x > 68) or (y > 89)) or (2 * x - 7 * y) < A):
+            break
+    else:
+        print(A, x, y)
+        exit(0)
