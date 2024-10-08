@@ -1,0 +1,9 @@
+def f(st, en):
+    if st == 12 or st < en:
+        return 0
+    if st == en:
+        return 1
+    return f(st - 2, en) + f(st // 2, en)
+
+
+print(f(42, 26) * f(26, 1))
