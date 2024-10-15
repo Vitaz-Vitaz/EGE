@@ -13,3 +13,7 @@ while i < len(s):
         i += 1
 print(ans)
 # print("CA" * 27)
+-----------------------------------------
+for n in range(100, 0, -1):
+    if 'CA' * n in s:
+        print(n * 2)
